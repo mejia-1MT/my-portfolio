@@ -1,0 +1,54 @@
+.getToKnow {
+  display: flex;
+  letter-spacing: 0.05rem;
+  position: relative;
+  color: theme("colors.tak");
+  padding: 5px 0;
+}
+
+.arrow {
+  transform: scaleX(2.5); /* Adjust the scaling factor as needed */
+  margin-left: 20px;
+  color: theme("colors.tak");
+  transition: transform 1.5s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.cursor {
+  display: inline-block; /* Ensures the cursor behaves like text */
+  margin-left: 2px; /* Space between text and cursor */
+}
+
+.getToKnow:hover .arrow {
+  transform: translateX(10px) scaleX(2.5); /* Combine translateX with the initial scale */
+  color: theme("colors.tak");
+}
+
+@keyframes upslide {
+  from {
+    transform: translateY(0);
+  }
+  99% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.slide_up {
+  animation: upslide 1.5s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    height: 500px;
+  }
+
+  .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

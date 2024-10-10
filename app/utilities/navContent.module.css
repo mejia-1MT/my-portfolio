@@ -1,0 +1,32 @@
+.navContent {
+  position: fixed;
+  inset: 0px;
+  background-color: var(--primary-color);
+  color: "#696969";
+  z-index: 20;
+}
+
+.routesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.destination ul li {
+  transform: translateY(0); /* Start from original position */
+  transition: transform 1.2s cubic-bezier(0.33, 1, 0.68, 1); /* Smooth transition for transform */
+}
+
+/* Hover effect: move the item up */
+.destination:hover ul li {
+  transform: translateY(-120%); /* Move up by 100% */
+  transition-delay: calc(
+    var(--index) * 0.025s
+  ); /* Staggered delay based on index */
+}
+
+.destination:hover * {
+  color: white;
+}

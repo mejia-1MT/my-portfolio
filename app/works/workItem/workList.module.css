@@ -1,0 +1,133 @@
+/* WorkList.module.css */
+
+.main {
+  /* Main container styles */
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  padding: 0 1.25rem;
+}
+
+.title {
+  margin-right: 0.75rem;
+  font-size: 1.875rem;
+}
+
+.divider {
+  height: 1px;
+  width: 2.25rem; /* w-9 */
+  border-radius: 9999px; /* rounded-full */
+  background-color: white; /* bg-white */
+}
+
+.projectsContainer {
+  width: full; /* w-screen */
+  margin-top: 5rem; /* mt-20 */
+}
+
+.project {
+  position: relative;
+  width: 90%;
+}
+
+.image {
+  width: 100%; /* w-full */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.endDate {
+  position: absolute;
+  top: -1.5rem;
+  right: 0.25rem;
+  overflow: hidden;
+}
+
+.projectType {
+  font-size: 0.75rem;
+  color: #8f8f8f; /* text-[#8f8f8f] */
+}
+
+.projectTitle {
+  font-size: 1.25rem; /* text-3xl */
+  cursor: default;
+}
+
+.projectTitle,
+.projectType {
+  font-weight: bold;
+}
+
+.image {
+  width: 100%;
+  transition: transform 0.8s var(--easing-func);
+}
+
+.project:hover .image {
+  transform: scale(1.05);
+}
+
+.arrowContainer {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  position: absolute;
+  bottom: 25%;
+  right: 1rem;
+  background-color: theme("colors.tak");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s var(--easing-func);
+}
+
+.project:hover .arrowContainer {
+  transform: scale(6);
+}
+
+.endDateContent {
+  transform: translateY(100%); /* Start off below */
+  transition: transform 0.8s var(--easing-func); /* Animate the movement */
+}
+
+.project:hover .endDateContent {
+  transform: translateY(0); /* Move up into view */
+}
+
+@media (min-width: 500px) {
+  .title {
+    margin-right: 0.75rem;
+    font-size: 3rem;
+  }
+
+  .project {
+    width: 450px;
+  }
+
+  .projectType {
+    font-size: 1rem;
+  }
+
+  .projectTitle {
+    padding-top: 0.25rem;
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .divider {
+    height: 2px;
+    width: 3rem; /* w-9 */
+    border-radius: 9999px; /* rounded-full */
+    background-color: white; /* bg-white */
+  }
+}

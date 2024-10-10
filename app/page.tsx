@@ -1,20 +1,12 @@
-"use client";
-// import React, { useState } from "react";
-import Hero from "@/pages/hero";
-import Sidebar from "@/src/components/sidebar";
+import React from "react";
+import Hero from "@/app/home/hero/hero";
+import Works from "./home/works/works";
 
 export default function Home() {
-  // const [isOpen, setIsOpen] = useState(false);
-  // const onClick = () => setIsOpen((prev) => !prev);
-
   return (
-    <main className="relative text-white py-5 px-5 ">
-      <div className="flex justify-between items-center ">
-        <h1 className="text-4xl">J1</h1>
-
-        <Sidebar />
-      </div>
+    <main className="relative text-white  bg-primary z-10">
       <Hero />
+      <Works />
     </main>
   );
 }

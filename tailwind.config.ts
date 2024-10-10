@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import type { PluginAPI } from "tailwindcss/types/config"; // Import types for addUtilities
 
 const config: Config = {
   content: [
@@ -10,11 +11,24 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#1d1d1d",
-        tik: "#69c9do0",
-        tok: "#ee1d52",
+        tik: "#FE2C55",
+        tok: "#25F4EE",
+        tak: "#F1AFDD",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }: PluginAPI) {
+      const newUtilities = {
+        ".custom-outline": {
+          "@apply outline outline-1 outline-offset-0": {},
+        },
+        // Navigation
+      };
+
+      addUtilities(newUtilities);
+    },
+  ],
 };
+
 export default config;

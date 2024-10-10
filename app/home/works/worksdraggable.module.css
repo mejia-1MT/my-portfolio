@@ -1,0 +1,51 @@
+.grab {
+  cursor: grab;
+}
+
+.grabbing {
+  cursor: grabbing;
+}
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.image {
+  transition: transform 0.8s cubic-bezier(0, 0.55, 0.45, 1); /* Smooth transition for zoom effect */
+  overflow: hidden; /* Ensure the image doesn't overflow its container */
+}
+
+.content:hover .image {
+  transform: scale(1.05); /* Zoom in effect on hover */
+}
+
+.arrow {
+  transform: scaleX(2.5) scaleY(1.5);
+  margin-left: 35px;
+  color: theme("colors.tak");
+  transition: transform 2s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.content:hover .arrow {
+  transform: translateX(16px) scaleX(2.5) scaleY(1.5); /* Scale on hover */
+}
+
+.textContainer {
+  transition: transform 0.8s cubic-bezier(0, 0.55, 0.45, 1);
+}
+
+.content:hover .textContainer {
+  transform: translate(10px); /* Move text on hover */
+}
+
+.more {
+  transition: transform 1.5s cubic-bezier(0, 0.55, 0.45, 1),
+    background-color 0.6s ease;
+}
+
+.more:hover {
+  transform: scale(1.05);
+  color: theme("colors.tak");
+}

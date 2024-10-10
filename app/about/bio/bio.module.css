@@ -1,0 +1,17 @@
+.slideAni {
+  animation: slide var(--easing-func);
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 100px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

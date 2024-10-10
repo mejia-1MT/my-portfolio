@@ -6,6 +6,9 @@
 :root {
   --primary-color: #1d1d1d;
   --secondary-color: #ff6347;
+  --easing-func: cubic-bezier(0.33, 1, 0.68, 1);
+  --special-font: "Poiret One", cursive;
+  --normal-font: "Raleway", sans-serif;
 }
 
 [data-theme="dark"] {
@@ -14,8 +17,10 @@
 }
 
 body {
+  font-family: var(--normal-font);
   background-color: var(--primary-color);
-  font-family: "Raleway", sans-serif;
+  color: white;
+  position: relative;
 }
 
 h1,
@@ -24,5 +29,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poiret One", cursive;
+  font-family: var(--special-font);
+}
+
+.title {
+  font-size: 24px;
+  font-family: var(--special-font);
+}
+
+.shadow-text {
+  text-shadow: 2px 2px 2px #515151;
 }

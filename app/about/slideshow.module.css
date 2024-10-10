@@ -1,0 +1,74 @@
+.characteristics {
+  font-family: "Poiret One", cursive;
+  top: 15%;
+  position: absolute;
+  letter-spacing: 0.12rem;
+  line-height: 1.1;
+}
+
+@keyframes slider {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+.slider {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: aqua;
+}
+
+.slider ul {
+  width: 100%;
+  position: relative;
+  animation: slider 30s linear infinite;
+  animation-delay: -8s;
+}
+
+.slider ul li {
+  font-family: "Poiret One";
+  letter-spacing: 0.5rem;
+  bottom: 0;
+  position: absolute;
+  font-size: 15rem; /* 72px */
+  white-space: nowrap;
+  margin: 0;
+  line-height: 1;
+}
+
+@keyframes upanimation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.container {
+  height: 100%;
+  animation: upanimation 50s linear infinite;
+  animation-delay: -15s;
+}
+
+@keyframes upslide {
+  from {
+    transform: translateY(0%);
+  }
+  99% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.slide_up {
+  animation: upslide 1.5s ease-in-out forwards;
+  animation-delay: 2s;
+}

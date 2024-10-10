@@ -1,0 +1,15 @@
+.floatAnimation {
+  animation: float linear;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: cover;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-70px);
+  }
+}
