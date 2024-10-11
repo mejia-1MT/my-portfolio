@@ -80,7 +80,7 @@ const NavContent: React.FC<NavContentProps> = ({ isOpen, onClose }) => {
       <div className="flex flex-col sm:pt-[120px] md:w-[70%] md:pl-[10%] font-light">
         <Link
           href="/"
-          className={`destination overflow-hidden flex mt-24 my-5 h-[5rem] lg:h-[7rem]  bg-blue-500`}
+          className={`destination overflow-hidden flex mt-24 my-5 h-[5rem] lg:h-[7rem]`}
           onClick={onClose}
         >
           <p className="text-xl">01</p>

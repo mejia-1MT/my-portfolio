@@ -26,7 +26,6 @@ const Footer = () => {
         <Link
           href="./Resumé.pdf" // Directly referencing the public path
           target="_blank"
-          download
           rel="noopener noreferrer"
           className="h-11 aspect-square rounded-full custom-outline outline-[#696969] flex items-center justify-center hover:text-tak hover:outline-tak group"
         >
