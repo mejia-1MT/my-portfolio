@@ -73,14 +73,14 @@ const NavContent: React.FC<NavContentProps> = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className={`fixed inset-0 bg-primary h-screen overflow-hidden  text-[#696969] flex flex-col  md:flex-row z-30 pl-5 ${
+      className={`fixed inset-0 bg-primary h-screen overflow-hidden text-[#696969] flex flex-col  md:flex-row z-30 pl-5 ${
         isOpen ? "slide-down" : "slide-up"
       }`}
     >
       <div className="flex flex-col sm:pt-[120px] md:w-[70%] md:pl-[10%] font-light">
         <Link
           href="/"
-          className={`destination overflow-hidden flex mt-24 my-5 h-[5rem] sm:h-[7rem]`}
+          className={`destination overflow-hidden flex mt-24 my-5 h-[5rem] lg:h-[7rem]  bg-blue-500`}
           onClick={onClose}
         >
           <p className="text-xl">01</p>
@@ -93,7 +93,7 @@ const NavContent: React.FC<NavContentProps> = ({ isOpen, onClose }) => {
         </Link>
         <Link
           href="/works"
-          className={`destination overflow-hidden flex my-5 h-[5rem] sm:h-[7rem]`}
+          className={`destination overflow-hidden flex my-5 h-[5rem]  lg:h-[7rem]`}
           onClick={onClose}
         >
           <p className="text-xl">02</p>
@@ -106,7 +106,7 @@ const NavContent: React.FC<NavContentProps> = ({ isOpen, onClose }) => {
         </Link>
         <Link
           href="/about"
-          className={`destination overflow-hidden flex my-5 h-[5rem] sm:h-[7rem]`}
+          className={`destination overflow-hidden flex my-5 h-[5rem] lg:h-[7rem]`}
           onClick={onClose}
         >
           <p className="text-xl">03</p>

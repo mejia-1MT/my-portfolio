@@ -167,6 +167,17 @@ li {
   color: white;
 }
 
+@media (min-width: 670px) {
+  li {
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  .destination:hover ul li {
+    transform: translateY(-110%);
+    transition-delay: calc(var(--index) * 0.025s);
+  }
+}
+
 @media (min-width: 1280px) {
   li {
     font-size: 5rem;
