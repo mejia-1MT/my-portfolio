@@ -22,7 +22,7 @@ export default function WorkDetailPage({
   console.log(work.subImg.src);
 
   return (
-    <main className="text-[#dddddd] bg-primary text-sm pb-[150px] px-8 tracking-widest leading-relaxed">
+    <main className="text-[#dddddd] bg-primary text-sm pb-[150px] px-8 tracking-widest leading-relaxed overflow-hidden">
       <div className="w-full h-[600px] flex justify-center items-center ">
         {" "}
         <h2 className="text-6xl lg:text-9xl font-bold w-[80%] text-center">
@@ -51,7 +51,7 @@ export default function WorkDetailPage({
           <h3 className="text-white font-semibold">ROLE</h3>
           <p>{work.role}</p>
         </div>
-        <div>
+        <div className="overflow-hidden">
           <h3 className="text-white font-semibold">TECH STACK</h3>
           <p className="truncate">{work.techStack.join(", ")}</p>
         </div>
