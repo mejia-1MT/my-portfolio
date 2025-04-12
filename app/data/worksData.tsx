@@ -1,5 +1,8 @@
 import { Work } from "@/app/types/workTypes";
 // Import images
+import w0main from "@/public/img/works/jlrcIcon.png";
+import w0sub from "@/public/img/works/jlrc1.png";
+import w0in from "@/public/img/works/jlrcIn.png";
 import w1main from "@/public/img/works/posIcon.png";
 import w1sub from "@/public/img/works/pos1.png";
 import w1in from "@/public/img/works/posIn.png";
@@ -21,6 +24,39 @@ import w6in from "@/public/img/works/tranIn.png";
 
 // Create an array of works
 export const works: Work[] = [
+  {
+    id: 0,
+    img: w0main, // Directly assign the imported image
+    subImg: w0sub,
+    inImg: w0in,
+    title: "JLRC SpeakEZ",
+    overview: `An ESL tutor booking platform that allows students to book sessions with tutors, manage materials, and track progress.`,
+    description: `JLRC SpeakEZ is a fully integrated platform designed for ESL (English as a Second Language) tutoring. The project was developed with a strong focus on both the frontend and backend. The frontend features dynamic and responsive interfaces for students, tutors, and admins, built using Next.js, TypeScript, and Tailwind CSS. On the backend, it includes admin functionalities such as creating, editing, and deleting tutor accounts and managing educational materials through CRUD operations, ensuring smooth user interactions across the platform.`,
+    features: [
+      {
+        title: "Responsive User Interfaces",
+        description: `Developed dynamic, responsive pages for students, tutors, and admins using Next.js, TypeScript, and Tailwind CSS, ensuring seamless access across all devices.`,
+      },
+      {
+        title: "Admin Account Management",
+        description: `Managed backend processes for creating, editing, and deleting tutor accounts, giving admin users the flexibility to manage platform content efficiently.`,
+      },
+      {
+        title: "CRUD Operations for Materials",
+        description: `Implemented CRUD functionality for managing educational materials that tutors and students can access, streamlining the platform’s content management.`,
+      },
+      {
+        title: "Seamless Integration",
+        description: `Ensured smooth interaction between frontend and backend, providing a cohesive and efficient user experience across the platform.`,
+      },
+    ],
+    link: "jlrce-speakez", // You can add a link here
+    projectType: "WORK",
+    role: "FULL-STACK",
+    techStack: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "TypeScript", "TailwindCSS"],
+    start: "November 2024",
+    end: "April 2025",
+  },  
   {
     id: 1,
     img: w1main, // Directly assign the imported image
