@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="h-[300px] lg:h-[500px] w-full fixed bottom-0 z-[-1] bg-[#141414] text-white flex items-center justify-center ">
       <h4 className="text-5xl md:text-9xl opacity-60">Get Connected</h4>
       <h6 className="absolute bottom-5 lg:bottom-12 lg:left-20 left-8 text-[hsl(0,0%,90%)]">
-        Updated: Oct 2024
+        Updated: April 2025
       </h6>
       <div className="flex space-x-4 absolute bottom-3 lg:bottom-12 lg:right-20 right-8">
         <div
