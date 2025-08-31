@@ -83,7 +83,7 @@ const Resume = () => {
               <div
                 key={index}
                 className={`lg:mr-10 ${
-                  index < experienceContent.length - 1 ? "" : "pt-5"
+                  index == 0 ? "" : "pt-5"
                 }`}
               >
                 <p className={styles.title}>{cont.company}</p>
