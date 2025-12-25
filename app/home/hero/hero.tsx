@@ -22,9 +22,9 @@ const Hero = () => {
           priority
         />
 
-        <div
+        {/* <div
           className={`${styles.slide_up} absolute w-full h-full bg-tak`}
-        ></div>
+        ></div> */}
       </div>
       {/* Introduction */}
       <div
@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="text-3xl lg:text-4xl font-medium tracking-wider leading-loose mt-8  lg:mt-0 h-[200px] md:h-[120px] lg:h-[20%]">
           <p>
             {" "}
-            Juan is an aspiring <AutoType />
+            Juan is an up and coming <AutoType />
           </p>
         </div>
         <p className="text-sm lg:text-xl font-extralight text-[#dddddd] tracking-wider leading-loose">
@@ -44,9 +44,9 @@ const Hero = () => {
         </p>
         <Link
           href="/about"
-          className={` ${styles.getToKnow} mt-10 lg:mt-0 relative`}
+          className={` ${styles.getToKnow} mt-10 lg:mt-0 relative `}
         >
-          <p className="">Get to know me more</p>
+          <p className="cursor-pointer">Get to know me more</p>
           <Arrow className={`${styles.arrow}`} />
         </Link>
       </div>

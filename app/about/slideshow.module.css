@@ -59,16 +59,17 @@
   from {
     transform: translateY(0%);
   }
-  99% {
+  /* 99% {
     transform: translateY(-100%);
     opacity: 1;
-  }
+  } */
   100% {
+    transform: translateY(-100%);
     opacity: 0;
   }
 }
 
 .slide_up {
   animation: upslide 1.5s ease-in-out forwards;
-  animation-delay: 2s;
+  animation-delay: 0.1s;
 }

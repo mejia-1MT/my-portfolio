@@ -82,7 +82,44 @@
   animation: bot-reverse 0.7s ease-in-out forwards;
 }
 
+/* Base line styling */
+.line {
+  @apply absolute w-6 h-[2px] bg-white rounded;
+  transform-origin: center;
+  transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    opacity 0.7s ease-in-out;
+}
+
+/* Initial positions */
+.line.top {
+  transform: translateY(-4px);
+}
+
+.line.bottom {
+  transform: translateY(4px);
+}
+
+/* State when menu is open */
+.open .top {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.open .bottom {
+  transform: translateY(0px) rotate(-45deg);
+}
+
 /* navigation */
+
+.nav-content {
+  z-index: 2;
+  clip-path: inset(0 0 100% 0);
+
+  transition: clip-path 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-content.open {
+  clip-path: inset(0 0 0 0);
+}
 
 @keyframes slide-down {
   0% {
@@ -116,8 +153,7 @@
 }
 
 .slide-up {
-  animation: slide-up 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
-  animation-delay: 0.75s;
+  animation: slide-up 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
 @keyframes goUp {
@@ -147,45 +183,24 @@
   animation: goDown var(--time, 1.5s) cubic-bezier(0.33, 1, 0.68, 1); /* Adjust duration as needed */
 }
 
-li {
-  font-size: 3rem;
-  margin-bottom: 20px;
+.shadow-before-hover {
+  /* FONT SIZING — derived from container height */
+  font-size: clamp(4rem, 5vw, 6rem);
+  line-height: 1.1;
+
+  /* Weight & behavior */
+  font-weight: 500;
+  white-space: nowrap;
+
+  /* Core trick — shadow ABOVE */
+  text-shadow: 0 -1lh currentColor;
+  font-family: var(--special-font);
+  /* Start pushed DOWN */
+  transform: translateY(1lh);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.destination ul li {
-  transform: translateY(0); /* Start from original position */
-  transition: transform 1.2s cubic-bezier(0.33, 1, 0.68, 1); /* Smooth transition for transform */
-}
-
-/* Hover effect: move the item up */
-.destination:hover ul li {
-  transform: translateY(-125%);
-  transition-delay: calc(var(--index) * 0.025s);
-}
-
-.destination:hover * {
-  color: white;
-}
-
-@media (min-width: 670px) {
-  li {
-    font-size: 4rem;
-    margin-bottom: 10px;
-  }
-  .destination:hover ul li {
-    transform: translateY(-110%);
-    transition-delay: calc(var(--index) * 0.025s);
-  }
-}
-
-@media (min-width: 1280px) {
-  li {
-    font-size: 5rem;
-    margin-bottom: 20px;
-  }
-
-  .destination:hover ul li {
-    transform: translateY(-110%);
-    transition-delay: calc(var(--index) * 0.025s);
-  }
+.group:hover .shadow-before-hover {
+  /* Move UP into place */
+  transform: translateY(0);
 }

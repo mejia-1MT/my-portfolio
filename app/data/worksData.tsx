@@ -53,10 +53,17 @@ export const works: Work[] = [
     link: "jlrce-speakez", // You can add a link here
     projectType: "WORK",
     role: "FULL-STACK",
-    techStack: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "TypeScript", "TailwindCSS"],
+    techStack: [
+      "Next.js",
+      "NestJS",
+      "PostgreSQL",
+      "Prisma",
+      "TypeScript",
+      "TailwindCSS",
+    ],
     start: "November 2024",
     end: "April 2025",
-  },  
+  },
   {
     id: 1,
     img: w1main, // Directly assign the imported image
@@ -263,99 +270,99 @@ export const works: Work[] = [
     start: "July 2023",
     end: "Oct 2023",
   },
-  {
-    id: 5,
-    img: w5main,
-    subImg: w5sub,
-    inImg: w5in,
-    title: "Inventory System",
-    overview: `An application that manages inventory records, 
-    allowing users to create, read, update, and delete items.`,
-    description: `The Inventory System is a desktop application 
-    built using Python for managing products, stock levels, and 
-    inventory records. The system allows users to perform basic CRUD 
-    (Create, Read, Update, Delete) operations on inventory data, 
-    helping businesses track and manage their stock efficiently. The 
-    back-end database is powered by SQLite3, ensuring a lightweight 
-    and effective solution for storing inventory records. Your role 
-    focused on implementing functionality for various buttons, which 
-    included fetching and manipulating data from the database as well 
-    as navigating through different sections of the application.`,
-    features: [
-      {
-        title: "CRUD Functionality",
-        description: `Allows users to create, read, update, and 
-        delete inventory records, enabling effective management 
-        of stock levels and product details.`,
-      },
-      {
-        title: "Database Integration",
-        description: `Connects with an SQLite3 database to fetch 
-        and display inventory records, ensuring real-time updates 
-        and data integrity.`,
-      },
-      {
-        title: "Intuitive Navigation",
-        description: `Features clear navigational elements that 
-        guide users through different sections of the application, 
-        enhancing the overall user experience.`,
-      },
-      {
-        title: "Data Validation",
-        description: `Implements checks to ensure data accuracy 
-        before performing CRUD operations, preventing errors and 
-        maintaining consistency in inventory records.`,
-      },
-    ],
+  // {
+  //   id: 5,
+  //   img: w5main,
+  //   subImg: w5sub,
+  //   inImg: w5in,
+  //   title: "Inventory System",
+  //   overview: `An application that manages inventory records,
+  //   allowing users to create, read, update, and delete items.`,
+  //   description: `The Inventory System is a desktop application
+  //   built using Python for managing products, stock levels, and
+  //   inventory records. The system allows users to perform basic CRUD
+  //   (Create, Read, Update, Delete) operations on inventory data,
+  //   helping businesses track and manage their stock efficiently. The
+  //   back-end database is powered by SQLite3, ensuring a lightweight
+  //   and effective solution for storing inventory records. Your role
+  //   focused on implementing functionality for various buttons, which
+  //   included fetching and manipulating data from the database as well
+  //   as navigating through different sections of the application.`,
+  //   features: [
+  //     {
+  //       title: "CRUD Functionality",
+  //       description: `Allows users to create, read, update, and
+  //       delete inventory records, enabling effective management
+  //       of stock levels and product details.`,
+  //     },
+  //     {
+  //       title: "Database Integration",
+  //       description: `Connects with an SQLite3 database to fetch
+  //       and display inventory records, ensuring real-time updates
+  //       and data integrity.`,
+  //     },
+  //     {
+  //       title: "Intuitive Navigation",
+  //       description: `Features clear navigational elements that
+  //       guide users through different sections of the application,
+  //       enhancing the overall user experience.`,
+  //     },
+  //     {
+  //       title: "Data Validation",
+  //       description: `Implements checks to ensure data accuracy
+  //       before performing CRUD operations, preventing errors and
+  //       maintaining consistency in inventory records.`,
+  //     },
+  //   ],
 
-    link: "inventory-system",
-    projectType: "SCHOOL",
-    role: "BACK-END",
-    techStack: ["Python", "SQLite3", "Matplotlib"],
-    start: "Feb 2023",
-    end: "Feb 2023",
-  },
-  {
-    id: 6,
-    img: w6main,
-    subImg: w6sub,
-    inImg: w6in,
-    title: "Tagalog-to-Baybayin Translator",
-    overview: `A tool that translates Tagalog text into Baybayin 
-    script for easy reading and understanding.`,
-    description: `This project is a Python-based translator that 
-    converts modern Tagalog text into the ancient Filipino script, 
-    Baybayin. The core functionality lies in a custom algorithm 
-    designed to dissect and translate Tagalog syllables into their 
-    corresponding Baybayin characters. The user interface (UI) is 
-    built using tkinter, providing a simple and interactive 
-    experience for users to input and see translations in real time.`,
-    features: [
-      {
-        title: "Translation Functionality",
-        description: `The application accurately translates Tagalog 
-        text into Baybayin script, allowing users to convert their 
-        written words into a culturally significant form of writing.`,
-      },
-      {
-        title: "Mapping File",
-        description: `Utilizes a comprehensive mapping file that 
-        links Tagalog words to their corresponding Baybayin characters, 
-        ensuring high accuracy in translations.`,
-      },
-      {
-        title: "User-Friendly Interface",
-        description: `Features a simple and intuitive user interface 
-        built with Tkinter, allowing users to easily input Tagalog 
-        text and view the translated output seamlessly.`,
-      },
-    ],
+  //   link: "inventory-system",
+  //   projectType: "SCHOOL",
+  //   role: "BACK-END",
+  //   techStack: ["Python", "SQLite3", "Matplotlib"],
+  //   start: "Feb 2023",
+  //   end: "Feb 2023",
+  // },
+  // {
+  //   id: 6,
+  //   img: w6main,
+  //   subImg: w6sub,
+  //   inImg: w6in,
+  //   title: "Tagalog-to-Baybayin Translator",
+  //   overview: `A tool that translates Tagalog text into Baybayin
+  //   script for easy reading and understanding.`,
+  //   description: `This project is a Python-based translator that
+  //   converts modern Tagalog text into the ancient Filipino script,
+  //   Baybayin. The core functionality lies in a custom algorithm
+  //   designed to dissect and translate Tagalog syllables into their
+  //   corresponding Baybayin characters. The user interface (UI) is
+  //   built using tkinter, providing a simple and interactive
+  //   experience for users to input and see translations in real time.`,
+  //   features: [
+  //     {
+  //       title: "Translation Functionality",
+  //       description: `The application accurately translates Tagalog
+  //       text into Baybayin script, allowing users to convert their
+  //       written words into a culturally significant form of writing.`,
+  //     },
+  //     {
+  //       title: "Mapping File",
+  //       description: `Utilizes a comprehensive mapping file that
+  //       links Tagalog words to their corresponding Baybayin characters,
+  //       ensuring high accuracy in translations.`,
+  //     },
+  //     {
+  //       title: "User-Friendly Interface",
+  //       description: `Features a simple and intuitive user interface
+  //       built with Tkinter, allowing users to easily input Tagalog
+  //       text and view the translated output seamlessly.`,
+  //     },
+  //   ],
 
-    link: "tagalog-to-baybayin-translator",
-    projectType: "SCHOOL",
-    role: "MAIN",
-    techStack: ["React", "TailwindCSS", "PostgresSQL", "Prisma", "TypeScript"],
-    start: "July 2023",
-    end: "July 2023",
-  },
+  //   link: "tagalog-to-baybayin-translator",
+  //   projectType: "SCHOOL",
+  //   role: "MAIN",
+  //   techStack: ["React", "TailwindCSS", "PostgresSQL", "Prisma", "TypeScript"],
+  //   start: "July 2023",
+  //   end: "July 2023",
+  // },
 ];

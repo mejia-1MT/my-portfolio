@@ -6,6 +6,7 @@ import Link from "next/link";
 import SplashScreen from "@/app/components/loading";
 import Sidebar from "@/app/components/sidebar";
 import Footer from "@/app/components/footer";
+import Header from "./components/header";
 
 export const metadata: Metadata = {
   title: "Juan Mejia",
@@ -31,18 +32,15 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet"
+        ></link>
       </head>
       <body className={`antialiased`}>
         <SplashScreen />
 
-        <div className="fixed w-full top-0 z-20 ">
-          <div className="flex justify-between items-center my-5 ml-10 mr-5">
-            <Link href="/" className="title">
-              J1
-            </Link>
-            <Sidebar />
-          </div>
-        </div>
+        <Header />
 
         {children}
         <div className="h-6 bg-[#141414] mb-[300px] lg:mb-[500px]"></div>

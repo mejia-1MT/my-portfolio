@@ -38,7 +38,7 @@
 
 .slide_up {
   animation: upslide 1.5s ease-in-out forwards;
-  animation-delay: 2s;
+  animation-delay: 0.5s;
 }
 
 @media (min-width: 1280px) {
