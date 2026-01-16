@@ -3,7 +3,6 @@ import Linkedin from "@/public/svg/linkedin-02-stroke-rounded";
 import Facebook from "@/public/svg/facebook-02-stroke-rounded";
 // import React, { useEffect, useState } from "react";
 import Link from "next/link";
-// import Header from "../components/header";
 
 interface NavContentProps {
   isOpen: boolean | null;

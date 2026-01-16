@@ -1,5 +1,8 @@
 import { Work } from "@/app/types/workTypes";
 // Import images
+import wr1main from "@/public/img/works/geoIcon.png";
+import wr1sub from "@/public/img/works/geo1.png";
+import wr1in from "@/public/img/works/geoIn.png";
 import w0main from "@/public/img/works/jlrcIcon.png";
 import w0sub from "@/public/img/works/jlrc1.png";
 import w0in from "@/public/img/works/jlrcIn.png";
@@ -26,6 +29,70 @@ import w4in from "@/public/img/works/hackIn.png";
 export const works: Work[] = [
   {
     id: 0,
+    img: wr1main, // Directly assign the imported image
+    subImg: wr1sub,
+    inImg: wr1in,
+    title: "GeoGauntlet",
+    overview: `A fun geography quiz game built as a personal challenge to 
+work with third-party APIs and experiment with modern UI styling using 
+plain CSS.`,
+
+    description: `GeoGauntlet is a personal project inspired by the classic 
+"Higher or Lower" game, but reworked into a geography-themed quiz with a 
+few different ways to play. Instead of forcing players through a single 
+game mode, the app lets you choose between three main quiz types: 
+population (higher or lower), capital city identification, and flag 
+recognition.
+
+The main goal of this project was to get more comfortable working with 
+third-party APIs, using the REST Countries API as the data source for all 
+game modes. It also served as a way for me to revisit traditional CSS and 
+push it toward a more modern look, without relying on frameworks or 
+utility libraries. The app is built with React and focuses on core 
+concepts like state management, conditional rendering, and clean 
+component structure, all wrapped in a light-hearted geography quiz 
+experience.`,
+
+    features: [
+      {
+        title: "Higher or Lower Population",
+        description: `A quiz mode where players guess whether one country 
+    has a higher or lower population than another, inspired by the 
+    original Higher or Lower concept.`,
+      },
+      {
+        title: "Capital City Quiz",
+        description: `Tests knowledge of world capitals by asking players 
+    to identify the correct capital for a given country.`,
+      },
+      {
+        title: "Flag Identification",
+        description: `A visual quiz mode that challenges players to 
+    recognize countries based on their flags.`,
+      },
+      {
+        title: "REST Countries API Usage",
+        description: `Uses real data from the REST Countries API to power 
+    each quiz, serving as hands-on practice with fetching and handling 
+    third-party API data in React.`,
+      },
+      {
+        title: "Modern Styling with Plain CSS",
+        description: `Styled entirely with traditional CSS as a way to 
+    review and strengthen core CSS skills while still achieving a clean 
+    and modern look.`,
+      },
+    ],
+
+    link: "geo-gauntlet",
+    projectType: "PERSONAL",
+    role: "SOLO",
+    techStack: ["React", "CSS", "restcountries API"],
+    start: "Dec 2025",
+    end: "Jan 2026",
+  },
+  {
+    id: 1,
     img: w0main, // Directly assign the imported image
     subImg: w0sub,
     inImg: w0in,
@@ -65,7 +132,7 @@ export const works: Work[] = [
     end: "April 2025",
   },
   {
-    id: 1,
+    id: 2,
     img: w1main, // Directly assign the imported image
     subImg: w1sub,
     inImg: w1in,
@@ -117,7 +184,7 @@ export const works: Work[] = [
     end: "Sept 2024",
   },
   {
-    id: 2,
+    id: 3,
     img: w2main,
     subImg: w2sub,
     inImg: w2in,
@@ -167,7 +234,7 @@ export const works: Work[] = [
     end: "July 2022",
   },
   {
-    id: 3,
+    id: 4,
     img: w3main,
     subImg: w3sub,
     inImg: w3in,
@@ -217,7 +284,7 @@ export const works: Work[] = [
     end: "July 2023",
   },
   {
-    id: 4,
+    id: 5,
     img: w4main,
     subImg: w4sub,
     inImg: w4in,
