@@ -1,3 +1,5 @@
+"use client";
+
 // app/works/[id]/page.tsx
 import styles from "./link.module.css";
 import { works } from "@/app/data/worksData"; // Import your works data
@@ -44,8 +46,17 @@ export default function WorkDetailPage({
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 w-full font-medium gap-3 py-5  md:border-b-[1px] border-[#dddddd]">
         <div>
-          <h3 className="text-white font-semibold">PROJECT</h3>
-          <p>{work.projectType}</p>
+          <h3 className="text-white font-semibold">LINK</h3>
+          <div
+            className={
+              work.live
+                ? "cursor-pointer text-blue-500 underline"
+                : "text-gray-400"
+            }
+            onClick={() => work.live && window.open(work.live, "_blank")}
+          >
+            {work.live ?? "PRIVATE LINK NOT PROVIDED"}
+          </div>
         </div>
         <div>
           <h3 className="text-white font-semibold">ROLE</h3>

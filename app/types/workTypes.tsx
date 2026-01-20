@@ -20,4 +20,5 @@ export interface Work {
   techStack: Array<string>;
   start: string;
   end: string;
+  live: string | null;
 }
