@@ -9,6 +9,7 @@
   --easing-func: cubic-bezier(0.33, 1, 0.68, 1);
   --special-font: "Poiret One", cursive;
   --normal-font: "Raleway", sans-serif;
+  --curve-strength: calc(12% * (1 - var(--curve-progress)));
 }
 
 [data-theme="dark"] {
@@ -43,4 +44,14 @@ h6 {
 
 .shadow-text {
   text-shadow: 2px 2px 2px #515151;
+}
+
+.site-content {
+  position: relative;
+  overflow: hidden;
+  --curve-strength: calc(12% * (1 - var(--curve-progress)));
+  clip-path: ellipse(100% var(--curve-strength) at 50% 100%);
+  transition: clip-path 0.1s ease-out;
+  background-color: #1a1a1a; /* make sure background is visible */
+  border: 2px solid var(--secondary-color);
 }

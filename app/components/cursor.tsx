@@ -51,7 +51,7 @@ export default function Cursor() {
     // Animation loop
     let animationFrame: number;
     const animate = () => {
-      const speed = 0.15; // ADJUSTABLE
+      const speed = 1; // ADJUSTABLE
       pos.current.x += (mouse.current.x - pos.current.x) * speed;
       pos.current.y += (mouse.current.y - pos.current.y) * speed;
 

@@ -5,11 +5,11 @@ import Slideshow from "./slideshow";
 
 const About = () => {
   return (
-    <main className="bg-primary ">
+    <section className="bg-primary ">
       <Slideshow />
       <Bio />
       <Resume />
-    </main>
+    </section>
   );
 };
 

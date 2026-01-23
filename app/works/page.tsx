@@ -8,7 +8,7 @@ import styles from "./workItem/workList.module.css";
 
 const WorksPage = () => {
   return (
-    <main className={`${styles.main} bg-primary pb-20 pt-20 z-20`}>
+    <section className={`${styles.main} bg-primary pb-20 pt-20 z-20`}>
       <div className={styles.titleContainer}>
         <h1 className={`${styles.title} ml-[10%]`}>All Projects</h1>
         <div className={styles.divider}></div>
@@ -56,7 +56,7 @@ const WorksPage = () => {
           </div>
         ))}
       </div>
-    </main>
+    </section>
   );
 };
 
