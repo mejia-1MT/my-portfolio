@@ -36,7 +36,7 @@ const Hero = () => {
             Juan is an up and coming <AutoType />
           </p>
         </div>
-        <p className="text-sm lg:text-xl font-extralight text-[#dddddd] tracking-wider leading-loose">
+        <p className="text-sm lg:text-xl font-extralight text-[#dddddd] tracking-wider leading-loose ">
           Fueled by a fascination with the digital landscape. I’ve recently
           received my degree in Computer Science at the PUP, where I’ve honed
           and practiced my skills. Now, I’m eager to turn my passion into a
