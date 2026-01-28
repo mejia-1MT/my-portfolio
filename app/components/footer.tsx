@@ -34,7 +34,7 @@ const Footer = () => {
         </Link>
         <div
           className="h-11 aspect-square rounded-full custom-outline outline-[#696969] flex items-center justify-center hover:text-tak hover:outline-tak group"
-          onClick={() => window.open("https://github.com/mejia-1MT", "_blank")}
+          onClick={() => window.open("https://github.com/mejiajp", "_blank")}
         >
           <Github className="text-[hsl(0,0%,90%)] cursor-pointer group-hover:text-tak w-[60%]" />
         </div>
