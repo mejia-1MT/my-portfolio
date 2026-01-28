@@ -6,8 +6,14 @@
   justify-content: center;
   background-color: #1d1d1d;
   z-index: 50;
+  transition: opacity 0.7s ease-in-out;
 }
 
+.aniUp {
+  opacity: 0;
+}
+
+/* 
 @keyframes slide {
   100% {
     transform: translateY(-100%);
@@ -16,4 +22,4 @@
 
 .aniUp {
   animation: slide 0.8s var(--easing-func);
-}
+} */

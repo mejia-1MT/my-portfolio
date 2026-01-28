@@ -1,9 +1,3 @@
-/* WorkList.module.css */
-
-.main {
-  /* Main container styles */
-}
-
 .titleContainer {
   display: flex;
   align-items: center;
@@ -69,7 +63,7 @@
 
 .image {
   width: 100%;
-  transition: transform 0.8s var(--easing-func);
+  transition: transform 0.4s var(--easing-func);
 }
 
 .project:hover .image {
@@ -96,7 +90,7 @@
 
 .endDateContent {
   transform: translateY(100%); /* Start off below */
-  transition: transform 0.8s var(--easing-func); /* Animate the movement */
+  transition: transform 0.4s var(--easing-func); /* Animate the movement */
 }
 
 .project:hover .endDateContent {

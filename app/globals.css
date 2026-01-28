@@ -5,6 +5,7 @@
 /* styles/globals.css */
 :root {
   --primary-color: #1d1d1d;
+  --primary-dark: #141414;
   --secondary-color: #ff6347;
   --easing-func: cubic-bezier(0.33, 1, 0.68, 1);
   --special-font: "Poiret One", cursive;

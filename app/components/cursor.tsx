@@ -81,7 +81,7 @@ export default function Cursor() {
         pointer-events-none fixed left-0 top-0 z-[9999]
         w-[3.5vw] aspect-square rounded-full bg-tak
         opacity-0 transition-all duration-300 ease-out
-        flex items-center justify-center text-xs
+        flex items-center justify-center text-xs 
         ${visible ? "opacity-100" : "opacity-0"}
       `}
     >

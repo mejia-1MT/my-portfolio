@@ -5,10 +5,11 @@
 
 .go-up {
   transform: translateY(100%);
-  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s var(--easing-func);
+  /* transition-delay: 0.7s; */
 }
 
 .go {
   transform: translateY(0);
-  transition-delay: 0.6s;
+  transition-delay: 0.3s;
 }
