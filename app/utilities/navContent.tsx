@@ -2,6 +2,7 @@ import "@/app/styles/navigation.css";
 import Linkedin from "@/public/svg/linkedin-02-stroke-rounded";
 import Facebook from "@/public/svg/facebook-02-stroke-rounded";
 import Github from "@/public/svg/github-stroke-rounded";
+import GoUp from "@/app/utilities/goUp";
 // import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -32,90 +33,106 @@ const NavContent: React.FC<NavContentProps> = ({ isOpen, onClose }) => {
     //     isOpen === true ? " open" : ""
     //   }`}
     <div
-      className={`fixed inset-0 nav-content bg-primary h-screen overflow-hidden text-[#696969] flex flex-col  justify-between z-30 px-10  ${
+      className={`fixed inset-0 nav-content bg-primary h-screen overflow-hidden text-white flex flex-col  justify-between z-30 px-10  ${
         isOpen === true ? " open" : ""
       }`}
     >
       {/* Title  */}
       <div className=" w-full z-20  flex justify-between items-center py-5  ">
         <Link href="/" className="title hover:text-white " onClick={onClose}>
-          J1
+          SOMEJUANS PORTFOLIO
         </Link>
         <div className="w-[70px] aspect-square"></div>
       </div>
 
       {/* Links */}
-      <div className="flex flex-col  md:w-[70%]  font-light ">
-        <Link
-          href="/"
-          className={`destination group overflow-hidden flex  my-3  h-[5rem] lg:h-[6rem] hover:text-white`}
-          onClick={onClose}
-        >
-          <p className="text-xl">01</p>
-          <div className="shadow-before-hover font- ml-5 ">Home</div>
-        </Link>
-        <Link
-          href="/works"
-          className={`destination group overflow-hidden flex  my-3 h-[5rem] lg:h-[6rem] hover:text-white`}
-          onClick={onClose}
-        >
-          <p className="text-xl">02</p>
-          <div className="shadow-before-hover ml-5 ">Works</div>
-        </Link>
-        <Link
-          href="/about"
-          className={`destination group overflow-hidden flex  my-3  h-[5rem] lg:h-[6rem] hover:text-white`}
-          onClick={onClose}
-        >
-          <p className="text-xl">03</p>
-          <div className="shadow-before-hover ml-5 ">About</div>
-        </Link>
+      <div className="">
+        <GoUp mounted={isOpen}>
+          <Link
+            href="/"
+            className={`group overflow-hidden flex w-fit   lg:h-[6rem]  `}
+            onClick={onClose}
+          >
+            <p className="text-xl">01</p>
+            <div className="shadow-before-hover font- ml-5 " data-text="Home">
+              Home
+            </div>
+          </Link>
+        </GoUp>
+        <GoUp mounted={isOpen}>
+          <Link
+            href="/works"
+            className={`group overflow-hidden flex w-fit  lg:h-[6rem]  `}
+            onClick={onClose}
+          >
+            <p className="text-xl">02</p>
+            <div className="shadow-before-hover ml-5 " data-text="Works">
+              Works
+            </div>
+          </Link>
+        </GoUp>
+        <GoUp mounted={isOpen}>
+          <Link
+            href="/about"
+            className={` group overflow-hidden flex w-fit    lg:h-[6rem]  `}
+            onClick={onClose}
+          >
+            <p className="text-xl">03</p>
+            <div className="shadow-before-hover ml-5 " data-text="About">
+              About
+            </div>
+          </Link>
+        </GoUp>
       </div>
 
       {/* Socials */}
       <div className="flex items-center py-5">
         <div className="space-y-5">
-          <div className="overflow-hidden">
-            <p>Get in touch</p>
-            <u
-              className="cursor-pointer text-white mt-2 hover:text-tak"
-              onClick={handleMailClick}
-            >
-              <p>Send an email</p>
-            </u>
-          </div>
+          <GoUp mounted={isOpen}>
+            <div className="overflow-hidden">
+              <p>Get in touch</p>
+              <u
+                className="cursor-pointer text-white mt-2 hover:text-tak"
+                onClick={handleMailClick}
+              >
+                <p>Send an email</p>
+              </u>
+            </div>
+          </GoUp>
 
-          <div className="overflow-hidden m-[-1px]">
-            <p> More about me in socials </p>
-            <div className="flex space-x-4 m-[1px]">
-              <div className="w-10 h-10 fill-white custom-outline text-white flex justify-center items-center rounded-full hover:bg-[#ffffff0f] hover:outline-tak group">
-                <Linkedin
-                  className="text-white cursor-pointer group-hover:text-tak"
-                  onClick={() =>
-                    handleSocialClick(
-                      "https://www.linkedin.com/in/juan-paulo-mejia-857953282/"
-                    )
-                  }
-                />
-              </div>
-              <div className="w-10 h-10 fill-white custom-outline text-white flex justify-center items-center rounded-full hover:bg-[#ffffff0f] hover:outline-tak group">
-                <Facebook
-                  className="text-white cursor-pointer group-hover:text-tak"
-                  onClick={() =>
-                    handleSocialClick("https://www.facebook.com/s0mejuan")
-                  }
-                />
-              </div>
-              <div className="w-10 h-10 fill-white custom-outline text-white flex justify-center items-center rounded-full hover:bg-[#ffffff0f] hover:outline-tak group">
-                <Github
-                  className="text-white cursor-pointer group-hover:text-tak"
-                  onClick={() =>
-                    handleSocialClick("https://github.com/mejia-1MT")
-                  }
-                />
+          <GoUp mounted={isOpen}>
+            <div className="">
+              <p> More about me in socials </p>
+              <div className="flex space-x-4 m-[1px]">
+                <div className="w-10 h-10 fill-white custom-outline text-white flex justify-center items-center rounded-full hover:bg-[#ffffff0f] hover:outline-tak group">
+                  <Linkedin
+                    className="text-white cursor-pointer group-hover:text-tak"
+                    onClick={() =>
+                      handleSocialClick(
+                        "https://www.linkedin.com/in/juan-paulo-mejia-857953282/"
+                      )
+                    }
+                  />
+                </div>
+                <div className="w-10 h-10 fill-white custom-outline text-white flex justify-center items-center rounded-full hover:bg-[#ffffff0f] hover:outline-tak group">
+                  <Facebook
+                    className="text-white cursor-pointer group-hover:text-tak"
+                    onClick={() =>
+                      handleSocialClick("https://www.facebook.com/s0mejuan")
+                    }
+                  />
+                </div>
+                <div className="w-10 h-10 fill-white custom-outline text-white flex justify-center items-center rounded-full hover:bg-[#ffffff0f] hover:outline-tak group">
+                  <Github
+                    className="text-white cursor-pointer group-hover:text-tak"
+                    onClick={() =>
+                      handleSocialClick("https://github.com/mejia-1MT")
+                    }
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </GoUp>
         </div>
       </div>
     </div>
