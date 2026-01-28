@@ -1,3 +1,5 @@
+/* NAVIGATION BUTTON */
+
 .nav-button {
   background: rgba(0, 0, 0, 0.07);
   border-radius: 16px;
@@ -6,7 +8,6 @@
   -webkit-backdrop-filter: blur(3.6px);
 }
 
-/* Base line styling */
 .line {
   @apply absolute w-6 h-[2px] bg-white rounded;
   transform-origin: center;
@@ -14,7 +15,6 @@
     opacity 0.7s ease-in-out;
 }
 
-/* Initial positions */
 .line.top {
   transform: translateY(-4px);
 }
@@ -23,7 +23,7 @@
   transform: translateY(4px);
 }
 
-/* State when menu is open */
+/* Open Button*/
 .open .top {
   transform: translateY(0px) rotate(45deg);
 }
@@ -32,99 +32,44 @@
   transform: translateY(0px) rotate(-45deg);
 }
 
-/* navigation */
+/* NAVIGATION */
 
 .nav-content {
   z-index: 2;
   clip-path: inset(0 0 100% 0);
 
   transition: clip-path 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.3s;
 }
 
 .nav-content.open {
   clip-path: inset(0 0 0 0);
 }
 
-@keyframes slide-down {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  99% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-up {
-  0% {
-    transform: translateY(0);
-  }
-  99% {
-    transform: translateY(-100%);
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-}
-
-.slide-down {
-  animation: slide-down 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
-}
-
-.slide-up {
-  animation: slide-up 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
-}
-
-@keyframes goUp {
-  0% {
-    transform: translateY(var(--translate, 150%));
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes goDown {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(var(--translate, 150%));
-  }
-}
-
-.go-up {
-  animation: goUp var(--time, 1.5s) cubic-bezier(0.33, 1, 0.68, 1);
-  /* Adjust duration as needed */
-}
-
-.go-down {
-  animation: goDown var(--time, 1.5s) cubic-bezier(0.33, 1, 0.68, 1); /* Adjust duration as needed */
-}
-
 .shadow-before-hover {
-  /* FONT SIZING — derived from container height */
+  position: relative;
   font-size: clamp(4rem, 5vw, 6rem);
   line-height: 1.1;
-
-  /* Weight & behavior */
-  font-weight: 500;
-  white-space: nowrap;
-
-  /* Core trick — shadow ABOVE */
-  text-shadow: 0 -1lh currentColor;
   font-family: var(--special-font);
-  /* Start pushed DOWN */
-  transform: translateY(1lh);
+
+  transform: translateY(1em);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* kinda important i think */
+  will-change: transform;
+}
+
+.shadow-before-hover::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-1em);
+  color: currentColor;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .group:hover .shadow-before-hover {
-  /* Move UP into place */
   transform: translateY(0);
 }
